@@ -80,9 +80,7 @@ fmt.Println(string(jsonBytes))
 ### Explanation
 
 *   json.Marshal reads the struct fields
-    
 *   Converts them into JSON key-value pairs
-    
 *   Returns a byte slice (\[\]byte)
     
 
@@ -134,7 +132,6 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 ```
 
 *   Converts the struct to JSON
-    
 *   Writes JSON to the HTTP response body
     
 
@@ -154,7 +151,6 @@ func createUser(w http.ResponseWriter, r *http.Request) {
 ```
 
 *   Reads JSON from the request body
-    
 *   Converts it into a Go struct
     
 
@@ -164,14 +160,10 @@ Formats Other Than JSON
 Serialization is not limited to JSON. Other formats include:
 
 *   Protobuf (used in gRPC)
-    
 *   XML
-    
 *   MessagePack
-    
 *   Gob (Go-specific)
     
-
 The concept remains the same regardless of format.
 
 Interview One-Liner
@@ -183,9 +175,6 @@ Summary
 -------
 
 *   Serialization means struct to JSON or bytes
-    
 *   Deserialization means JSON or bytes to struct
-    
 *   Required for APIs, files, databases, and messaging systems
-    
 *   Core concept in backend development
