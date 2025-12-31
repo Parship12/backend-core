@@ -1,4 +1,4 @@
-Authentication and Authorization – Easy Explanation for Beginners
+Authentication and Authorization
 =================================================================
 
 This topic answers two very basic questions for any backend system:
@@ -6,10 +6,9 @@ This topic answers two very basic questions for any backend system:
 1.  **Who are you?**   
 2.  **What are you allowed to do?**
     
-
 Everything else builds on these two questions.
 
-1\. Authentication vs Authorization (Most Important Difference)
+1\. Authentication vs Authorization
 ---------------------------------------------------------------
 
 ### Authentication (Who are you?)
@@ -20,7 +19,6 @@ Examples:
 *   Login with username and password
 *   Login with Google
 *   Login with fingerprint
-    
 
 Question it answers:
 
