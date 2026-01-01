@@ -327,26 +327,51 @@ Status codes tell **what happened**.
 ## 11. HTTP Caching (Speed optimization)
 
 Caching means:
-
 > Save response so you don’t ask server again
 
 Benefits:
-
 * Faster response
 * Less server load
 
 Headers used:
-
 * `Cache-Control`
 * `ETag`
 
 Browser asks:
-
 > “Has this changed?”
 
 If not, server says:
-
 > “Use old version”
+
+How It Works (Simple Flow)
+* Browser requests a page or API
+* Server sends response with cache rules
+* Browser saves it
+
+Next request:
+* If still valid → use cached copy
+* If not sure → ask server to confirm
+
+Where Caching Happens
+* Browser cache (most common)
+* CDN / proxy cache
+* Server-side cache
+
+Key HTTP Cache Headers
+
+* Cache-Control:
+Tells how long something can be cached
+Example: max-age=60 (cache for 60 seconds)
+
+* ETag:
+A version tag for the response
+Browser asks: “Has this changed?”
+
+* If-None-Match:
+Browser sends ETag back to check freshness
+
+If unchanged, server replies:
+> 304 Not Modified (use cache)
 
 ---
 
